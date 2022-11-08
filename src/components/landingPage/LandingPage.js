@@ -1,9 +1,10 @@
 import React from 'react'
+import NavBar from './NavBar'
 
 function LandingPage() {
   return (
-    <div>
-      <h1 className="text-blue-500" >LandingPage</h1>
+    <div className='lg:mx-[200px] bg-red-500'>
+      <NavBar/>
       </div>
   )
 }
