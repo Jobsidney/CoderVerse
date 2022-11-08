@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 
 function LandingPage() {
   return (
-    <div className='lg:mx-[200px] bg-red-500'>
+    <div className='lg:mx-[200px] '>
       <NavBar/>
       </div>
   )
