@@ -7,7 +7,7 @@ import NavBar from './NavBar'
 
 function LandingPage() {
   return (
-    <div className='lg:mx-[300px] '>
+    <div className='lg:mx-[300px] sm:mx-[100px]'>
       <NavBar/>
       <HeroSection/>
       <DetailsSection/>
