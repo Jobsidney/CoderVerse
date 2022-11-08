@@ -1,4 +1,5 @@
 import React from 'react'
+import DetailsSection from './DetailsSection'
 import HeroSection from './HeroSection'
 import NavBar from './NavBar'
 
@@ -7,6 +8,7 @@ function LandingPage() {
     <div className='lg:mx-[200px] '>
       <NavBar/>
       <HeroSection/>
+      <DetailsSection/>
       </div>
   )
 }
