@@ -6,8 +6,8 @@ function NavBar() {
     <div className="flex flex-row justify-between items-center mt-4">
    <h1 className='text-2xl font-bold'>CoderVerse</h1>
    <div className='flex bg-white  border-solid border-2 border-slate-300 rounded-3xl'>
-    <input className="outline-none border-none bg-transparent pl-2" type="search" placeholder="Search..." name="search" value=""/>
-    <div className='bg-slate-300 border-l-[2px] p-2 border-black rounded-tr-3xl rounded-br-3xl'>
+    <input className="outline-none border-none bg-transparent pl-2 lg:w-[600px]" type="search" placeholder="Search..." name="search" value=""/>
+    <div className='bg-slate-300 border-l-[2px] p-2 border-black rounded-tr-3xl rounded-br-3xl lg:px-5'>
     <button className='' ><FaSearch /></button>
     </div>
    </div>
