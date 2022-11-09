@@ -2,9 +2,11 @@ import React from 'react'
 
 function Community() {
   return (
-    <div className='grid place-items-center min-h-screen '>
+    <div className='grid place-items-center min-h-screen mt-8'>
     <div className='  grid gap-4 xs:grid-cols-2  xs:p-8 md:grid-cols-4 '>
-        <h1 className='font-bold text-2xl text-center xs:col-span-2 xs:grid xs:grid-cols-2 bg-amber-400 x:gap-4 md:col-span-3 md:text-5xl' >Join a community today</h1>
+        <h1 className='font-bold text-2xl text-center xs:col-span-2 xs:grid xs:grid-cols-2  x:gap-4 md:col-span-3 md:text-5xl' >
+            <span className='bg-amber-400'>Join a community today</span>
+            </h1>
         <p className='xs:self-center md:col-start-1 md:col-span-2 md:pr-12 md:text-lg'>Do you want to be a pro in your field? Or want to grow your skills? Join a community
                     today and be ble to meet a team of other developers who yarn to learn and perfect there skills.
                 </p>
@@ -30,25 +32,10 @@ function Community() {
                 <div className='h-16 bg-teal-900 xs:h-auto xs:square'>
                     <img src='https://media.istockphoto.com/id/1197257945/photo/programmers-cooperating-at-it-company-developing-apps.jpg?b=1&s=170667a&w=0&k=20&c=2yNXxXvEJeCAwd5UCtd04OsJmF-NSuCfVn0bPzZJmhQ='/>
                 </div>
-                <p className='self-center md:text-lg md:col-span-2 md:text-center md:px-4'>Do you want to be a pro in your field? Or want to grow your skills?</p>
-        {/* <div classNameName='grid grid-cols-2 mt-5 items-center'>
-            <div classNameName='grid grid-cols-3 space-x-4 '>
-                <div classNameName='row-span-2' > 
-            <img src='https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=170667a&w=0&k=20&c=MRMqc79PuLmQfxJ99fTfGqHL07EDHqHLWg0Tb4rPXQc='/>
-            </div>
-            <img classNameName='' src='https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=170667a&w=0&k=20&c=MRMqc79PuLmQfxJ99fTfGqHL07EDHqHLWg0Tb4rPXQc='/>
-            <img classNameName='' src='https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=170667a&w=0&k=20&c=MRMqc79PuLmQfxJ99fTfGqHL07EDHqHLWg0Tb4rPXQc='/>
-            <img classNameName='' src='https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=170667a&w=0&k=20&c=MRMqc79PuLmQfxJ99fTfGqHL07EDHqHLWg0Tb4rPXQc='/>
-            <img classNameName='' src='https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=170667a&w=0&k=20&c=MRMqc79PuLmQfxJ99fTfGqHL07EDHqHLWg0Tb4rPXQc='/>
-            <img classNameName='' src='https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=170667a&w=0&k=20&c=MRMqc79PuLmQfxJ99fTfGqHL07EDHqHLWg0Tb4rPXQc='/>
-            <img classNameName='' src='https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?b=1&s=170667a&w=0&k=20&c=MRMqc79PuLmQfxJ99fTfGqHL07EDHqHLWg0Tb4rPXQc='/>
-            </div>
-
-            <div classNameName='bg-yellow-500'>
-                
-            </div>
-        </div> */}
-   
+                <div className='self-center md:text-lg md:col-span-2 md:text-center md:px-4'>
+                <p >Do you want to be a pro in your field? Or want to grow your skills?</p>
+                <button className='border-solid border-2 border-amber-400 rounded-md px-8 py-2 mt-7 hover:bg-amber-400 hover:text-white duration-500'>Join</button>
+                </div>
     </div>
     </div>
   )
