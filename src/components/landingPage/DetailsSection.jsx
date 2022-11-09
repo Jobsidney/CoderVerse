@@ -4,6 +4,9 @@ import DeveloperList from './DeveloperList'
 
 
 function DetailsSection() {
+    const[dev, setDev] = useState("All Developers")
+    const[lan, setLanguage] = useState("All Languages")
+    const [list, setList] = useState([]);
     
   return (
     <div >
