@@ -9,15 +9,17 @@ function DetailsSection() {
     const [list, setList] = useState([]);
 
     useEffect(() => {
-    //   fetch("http://localhost/9292/devs")
-    //   .then(response => response.json())
-    //   .then(data => setList(data))
-    if(dev === "All Developers"){
-        setList(data)
-    }else{
-       const filtered = data.filter(li => li.title === dev)
-       setList(filtered)
-    }
+      fetch("http://localhost:9292/devs")
+      .then(response => response.json())
+      .then(d =>{
+        if(dev === "All Developers"){
+            setList(d)
+        }else{
+           const filtered = d.filter(li => li.title === dev)
+           setList(filtered)
+        }
+      })
+   
    
     },[dev])
     console.log(list)
@@ -45,9 +47,8 @@ console.log(dev)
             <select className='mr-6 px-4 py-2 outline-none border-none' 
             value={dev}
             onChange={handleDevChange}>
-               <option >All Developers</option>
                 {data.map((title,index) => {
-                    return <option value={title.title} key={index}>{title.title}</option>
+                    return <option value={title} key={index}>{title}</option>
                 })}
             </select>
 
