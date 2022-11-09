@@ -13,7 +13,7 @@ function NavBar() {
    </div>
    <div className='flex items-center'>
    <h4 className='text-slate-400 mr-3'>Are you a coder?</h4>
-    <button className='border-solid border-2 border-amber-400 rounded-md px-3 py-2'>Submit Profile</button>
+    <button className='border-solid border-2 border-amber-400 rounded-md px-3 py-2 hover:bg-amber-400 hover:text-white duration-500'>Submit Profile</button>
    </div>
     </div>
   )
