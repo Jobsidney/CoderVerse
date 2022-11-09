@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {skills, data} from './data'
 import DeveloperList from './DeveloperList'
 
@@ -7,7 +7,7 @@ function DetailsSection() {
     const[dev, setDev] = useState("All Developers")
     const[lan, setLanguage] = useState("All Languages")
     const [list, setList] = useState([]);
-    
+
     useEffect(() => {
     //   fetch("http://localhost/9292/devs")
     //   .then(response => response.json())
@@ -21,6 +21,10 @@ function DetailsSection() {
    
     },[dev])
     console.log(list)
+
+   
+
+
     function handleDevChange(e) {
        setDev(e.target.value)
       
@@ -38,21 +42,25 @@ console.log(dev)
         </div>
         <div className='border-b-2  border-amber-400 pb-3'></div>
         <div className='mt-6'>
-            <select className='mr-6 px-4 py-2 outline-none border-none'>
-               <option value="all">All Developers</option>
+            <select className='mr-6 px-4 py-2 outline-none border-none' 
+            value={dev}
+            onChange={handleDevChange}>
+               <option >All Developers</option>
                 {data.map((title,index) => {
                     return <option value={title.title} key={index}>{title.title}</option>
                 })}
             </select>
 
-            <select className='px-4 py-2 outline-none border-none'>
-               <option value="all">All Languages</option>
+            <select className='px-4 py-2 outline-none border-none'
+            value={lan}
+            onChange={handleLanguageChange}>
+               {/* <option value="all">All Languages</option> */}
                 {skills.map((skill,index) => {
                     return <option value={skill} key={index}>{skill}</option>
                 })}
             </select>
         </div>
-<DeveloperList/>
+<DeveloperList data={list}/>
 
        
     </div>
