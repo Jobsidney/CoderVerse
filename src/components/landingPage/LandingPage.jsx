@@ -1,5 +1,6 @@
 import React from 'react'
 import Community from './Community'
+import Conclude from './Conclude'
 import DetailsSection from './DetailsSection'
 import Footer from './Footer'
 import HeroSection from './HeroSection'
@@ -12,6 +13,7 @@ function LandingPage() {
       <HeroSection/>
       <DetailsSection/>
       <Community/>
+      <Conclude/>
      {/* <Footer/> */}
       </div>
   )
