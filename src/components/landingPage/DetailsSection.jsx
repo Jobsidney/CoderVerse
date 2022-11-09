@@ -8,6 +8,19 @@ function DetailsSection() {
     const[lan, setLanguage] = useState("All Languages")
     const [list, setList] = useState([]);
     
+    useEffect(() => {
+    //   fetch("http://localhost/9292/devs")
+    //   .then(response => response.json())
+    //   .then(data => setList(data))
+    if(dev === "All Developers"){
+        setList(data)
+    }else{
+       const filtered = data.filter(li => li.title === dev)
+       setList(filtered)
+    }
+   
+    },[dev])
+    console.log(list)
   return (
     <div >
         <div className='flex flex-col items-center text-center mt-8'>
