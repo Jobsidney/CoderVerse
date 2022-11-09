@@ -21,6 +21,15 @@ function DetailsSection() {
    
     },[dev])
     console.log(list)
+    function handleDevChange(e) {
+       setDev(e.target.value)
+      
+    }
+
+    function handleLanguageChange(e) {
+        setLanguage(e.target.value)
+    }
+console.log(dev)
   return (
     <div >
         <div className='flex flex-col items-center text-center mt-8'>
