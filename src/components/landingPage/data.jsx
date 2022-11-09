@@ -1,5 +1,5 @@
 
-const skills = ['HTML', 'CSS','JavaScript', 'Figma', 'Ruby', 'Ruby on Rails']
+const skills = ['All Languages','HTML', 'CSS','JavaScript', 'Figma', 'Ruby', 'Ruby on Rails']
 const data = [
 {
     title:'FrontEnd',
