@@ -2,8 +2,8 @@ import React from 'react'
 
 function CreateProfile() {
   return (
-    <div className='flex flex-col justify-center items-center'>
-    <div className="flex flex-col space-y-2">
+    <div className='h-screen flex flex-col'>
+    <div className="h-full flex flex-col space-y-2 justify-center items-center">
         <h1 className='text-2xl font-bold'>Set up your profile</h1>
         <h1>Welcome to the community</h1>
         <form className='form flex flex-col space-y-6 text-slate-400'>
@@ -44,7 +44,7 @@ function CreateProfile() {
             placeholder="Upload image" 
             required 
             value=""/>
-              <button type="submit" className='bg-amber-300 text-white font-bold text-xl py-4'>
+              <button type="submit" className='bg-amber-400 text-white font-bold text-xl py-4'>
                 Submit profile</button>
         </form>
     </div>
