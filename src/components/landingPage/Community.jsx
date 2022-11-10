@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Community() {
@@ -35,8 +36,9 @@ function Community() {
                 </div>
                 <div className='self-center md:text-lg md:col-span-2 md:text-center md:px-4'>
                 <p >Do you want to be a pro in your field? Or want to grow your skills?</p>
+                <Link to='/community' >
                 <button className='button'>Join</button>
-              
+                </Link>
                 </div>
     </div>
     </div>
