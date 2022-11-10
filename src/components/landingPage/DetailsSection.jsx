@@ -3,39 +3,8 @@ import {skills, data} from './data'
 import DeveloperList from './DeveloperList'
 
 
-function DetailsSection({dev,  handleDevChange, lan, handleLanguageChange, list}) {
-//     const[dev, setDev] = useState("All Developers")
-//     const[lan, setLanguage] = useState("All Languages")
-//     const [list, setList] = useState([]);
+function DetailsSection({dev,  handleDevChange, lan, handleLanguageChange, list, onClick}) {
 
-//     useEffect(() => {
-//       fetch("http://localhost:9292/devs")
-//       .then(response => response.json())
-//       .then(d =>{
-//         if(dev === "All Developers"){
-//             setList(d)
-//         }else{
-//            const filtered = d.filter(li => li.title === dev)
-//            setList(filtered)
-//         }
-//       })
-   
-   
-//     },[dev])
-//     console.log(list)
-
-   
-
-
-//     function handleDevChange(e) {
-//        setDev(e.target.value)
-      
-//     }
-
-//     function handleLanguageChange(e) {
-//         setLanguage(e.target.value)
-//     }
-// console.log(dev)
   return (
     <div >
         <div className='flex flex-col items-center text-center mt-8'>
@@ -55,13 +24,12 @@ function DetailsSection({dev,  handleDevChange, lan, handleLanguageChange, list}
             <select className='px-4 py-2 outline-none border-none'
             value={lan}
             onChange={handleLanguageChange}>
-               {/* <option value="all">All Languages</option> */}
                 {skills.map((skill,index) => {
                     return <option value={skill} key={index}>{skill}</option>
                 })}
             </select>
         </div>
-<DeveloperList data={list}/>
+<DeveloperList data={list} onClick={onClick}/>
 
        
     </div>
