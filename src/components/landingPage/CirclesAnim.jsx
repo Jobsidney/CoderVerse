@@ -7,8 +7,8 @@ function CirclesAnim() {
         opacity: 0,
     }}
     animate={{
-        scale: [1,2,3,3,1],
-        opacity:[0.1, 0.2, 0.4, 0.8,0.1, 1.0],
+        scale: [1,1.5,1.5,2,1],
+        opacity:[0.1, 0.2, 0.4, 0.5, 0.1, 1.0],
         borderRadius: ["20%", "20%", "50%", "80%", "20%" ]
     }}
     transition={{
