@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Switch,Route } from 'react-router-dom'
 import Community from './Community'
 import Conclude from './Conclude'
 import DetailsSection from './DetailsSection'
-// import Footer from './Footer'
 import HeroSection from './HeroSection'
-import NavBar from './NavBar'
+
 
 function LandingPage() {
 
@@ -30,10 +28,6 @@ function LandingPage() {
   },[dev])
   console.log(list)
 
- function handleNewDev(newDev)
- setList([...list, newDev])
-
-
   function handleDevChange(e) {
      setDev(e.target.value)
     
@@ -51,7 +45,7 @@ console.log(dev)
   console.log(search)
   return (
     <div className='lg:mx-[300px] sm:mx-[100px]'>
-      <NavBar values={search} onChange={handleChange} name="Submit profile"/>
+     
       <HeroSection/>
       <DetailsSection 
       dev={dev} 
@@ -61,13 +55,9 @@ console.log(dev)
       list={list}/>
       <Community/>
       <Conclude/>
-     {/* <Footer/> */}
-     <Switch>
-     <Route path='/createProfile'>
-      <CreateProfile onAdd={handleNewDev}/>
-      </Route>
-     </Switch>
-    
+     
+  
+     
       </div>
   )
 }
