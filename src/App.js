@@ -1,15 +1,23 @@
 import './App.css';
-import Footer from './components/landingPage/Footer';
 import LandingPage from './components/landingPage/LandingPage';
-import CreateProfile from './components/newDev/CreateProfile';
+import NavBar from './components/landingPage/NavBar';
+import Footer from './components/landingPage/Footer';
 
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 function App() {
   
   return (
     <div className="App">
-     {/* <LandingPage/> */}
-     <CreateProfile/>
-     {/* <Footer/> */}
+      <Router>
+    {/* <NavBar/> */}
+    <Switch>
+      <Route exact path='/'>
+      <LandingPage/>
+      </Route>
+     
+    </Switch>
+    <Footer/>
+    </Router>
     </div>
   );
 }
