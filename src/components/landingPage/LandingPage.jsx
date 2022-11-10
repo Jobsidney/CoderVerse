@@ -5,7 +5,7 @@ import DetailsSection from './DetailsSection'
 import HeroSection from './HeroSection'
 
 
-function LandingPage() {
+function LandingPage({onClick}) {
 
   const[search, setSearch] = useState("")
   const[dev, setDev] = useState("All Developers")
@@ -47,7 +47,8 @@ console.log(dev)
     <div className='lg:mx-[300px] sm:mx-[100px]'>
      
       <HeroSection/>
-      <DetailsSection 
+      <DetailsSection
+      onClick={onClick} 
       dev={dev} 
       handleDevChange={handleDevChange} 
       lan={lan}
