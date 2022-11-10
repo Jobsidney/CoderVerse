@@ -1,5 +1,5 @@
 import React from 'react'
-import Stack from './Stack'
+
 
 
 function Conclude() {
@@ -8,7 +8,7 @@ function Conclude() {
         <h1 className='text-center font-bold text-4xl'>Do not be left behind.</h1>
         <p className='text-center text-xl'>Choose your stack today. Get coding resources to get you started</p>
         <button className='button'>Visit site</button>
-   {/* <Stack/> */}
+ 
     </div>
   )
 }
