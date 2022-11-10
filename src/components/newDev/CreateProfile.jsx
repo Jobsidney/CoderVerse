@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
-import {FaSearch} from 'react-icons/fa'
-import {Link } from 'react-router-dom'
-import NavBar from '../landingPage/NavBar';
 
-function CreateProfile({onAdd}) {
+function CreateProfile() {
   const history = useHistory()
   const [formData, setFormData] = useState({
     name: "",
@@ -33,13 +30,13 @@ function CreateProfile({onAdd}) {
   body: JSON.stringify(formData)
  })
  .then(response => response.json())
- .then(data => onAdd(data))
+ .then(data => data)
  history.push("/");
   }
   console.log(formData)
   return (<>
   <div className='lg:mx-[300px] sm:mx-[100px]'>
-<NavBar name="Go Back"/>
+
   </div>
     <div className='h-screen flex flex-col'>
     <div className="h-full flex flex-col space-y-2 justify-center items-center">
@@ -50,7 +47,7 @@ function CreateProfile({onAdd}) {
             type="text" 
             name="name" 
             placeholder="Name" 
-            // required 
+            required 
             value={formData.name}
             onChange={handleChange}/>
 
@@ -58,14 +55,14 @@ function CreateProfile({onAdd}) {
             type="text" 
             name="title" 
             placeholder="Title" 
-            // required 
+            required 
             value={formData.title}
             onChange={handleChange}/>
              <input 
             type="text" 
             name="location" 
             placeholder="Location" 
-            // required 
+            required 
             value={formData.location}
             onChange={handleChange}/>
 
@@ -81,7 +78,7 @@ function CreateProfile({onAdd}) {
             type="text" 
             name="github" 
             placeholder="GitHub Link" 
-            // required 
+            required 
             value={formData.github}
             onChange={handleChange}/>
             
@@ -89,7 +86,7 @@ function CreateProfile({onAdd}) {
             type="file" 
             name="image" 
             placeholder="Upload image" 
-            // required 
+            required 
             value={formData.image}
             onChange={handleChange}/>
               <button type="submit" className='bg-amber-400 text-white font-bold text-xl py-4'>
