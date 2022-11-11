@@ -27,6 +27,13 @@ https://coder-verse.vercel.app/
 ## Back-end Repo link
 https://github.com/Muthiira/phase-3-sinatra-react-project
 
+## Backend endpoints
+https://devs35.herokuapp.com/devs
+https://devs35.herokuapp.com/languages
+https://devs35.herokuapp.com/projects
+https://devs35.herokuapp.com/devs/:id/projects
+https://devs35.herokuapp.com/devs/:id/languages
+
 
 ## Screenshots
 
