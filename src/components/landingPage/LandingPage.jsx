@@ -13,7 +13,7 @@ function LandingPage({onClick}) {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:9292/devs")
+    fetch("https://devs35.herokuapp.com/devs")
     .then(response => response.json())
     .then(d =>{
       if(dev === "All Developers"){
@@ -44,7 +44,7 @@ console.log(dev)
   }
   console.log(search)
   return (
-    <div className='lg:mx-[300px] sm:mx-[100px]'>
+    <div className='lg:mx-[80px] md:mx-[20px] sm:mx-[100px] 2xl:mx-[200px] xl:mx-[100px]'>
      
       <HeroSection/>
       <DetailsSection

@@ -5,13 +5,13 @@ import {Link } from 'react-router-dom'
 function NavBar({values, onChange, name}) {
   
   return (
-    <div className="flex flex-row justify-between items-center mt-4 lg:mx-[300px] sm:mx-[100px]">
+    <div className="flex flex-row justify-between items-center mt-4 lg:mx-[80px] sm:mx-[100px] 2xl:mx-[200px] xl:mx-[100px] md:mx-[20px]">
       <Link to='/'>
       <h1 className='text-2xl font-bold'>CoderVerse</h1>
       </Link>
   
    <div className='flex bg-white  border-solid border-2 border-slate-300 rounded-3xl'>
-    <input className="outline-none border-none bg-white pl-2 lg:w-[600px] focus:bg-white focus:border-none focus:outline-none focus:rounded-3xl" type="search" placeholder="Search..." name="search" 
+    <input className="outline-none border-none bg-white pl-2 lg:w-[300px] xl:w-[500px] focus:bg-white focus:border-none focus:outline-none focus:rounded-3xl" type="search" placeholder="Search..." name="search" 
     value={values}
     onChange={onChange}/>
     <div className='bg-slate-300 border-l-[2px] p-2 border-black rounded-tr-3xl rounded-br-3xl lg:px-5'>

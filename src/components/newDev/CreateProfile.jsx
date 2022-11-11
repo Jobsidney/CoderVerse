@@ -24,13 +24,24 @@ function CreateProfile() {
   function handleSubmit(e){
  e.preventDefault();
 
- fetch ("http://localhost:9292/devs",{
+ fetch ("https://devs35.herokuapp.com/devs",{
   method: "POST",
   headers: {'Content-type':'application/json'},
   body: JSON.stringify(formData)
  })
  .then(response => response.json())
  .then(data => data)
+
+//  fetch ("https://devs35.herokuapp.com/languagesg",{
+//   method: "POST",
+//   headers: {'Content-type':'application/json'},
+//   body: JSON.stringify({
+//     language: formData.languages,
+//   })
+//  })
+//  .then(response => response.json())
+//  .then(data => console.log(data))
+
  history.push("/");
   }
   console.log(formData)
@@ -66,13 +77,13 @@ function CreateProfile() {
             value={formData.location}
             onChange={handleChange}/>
 
-             {/* <input 
+             <input 
             type="text" 
             name="languages" 
             placeholder="Languages" 
             // required 
             value={formData.languages}
-            onChange={handleChange}/> */}
+            onChange={handleChange}/>
 
              <input 
             type="text" 
