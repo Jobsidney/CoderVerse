@@ -10,13 +10,18 @@ import Devcard from './components/DevCard/DevCard';
 
 function App() {
   const[data, setData] = useState({})
+  const [lan, setLan] = useState([])
 
   function handleClick(id){
-    fetch(`http://localhost:9292/devs/${id}`)
+    fetch(`https://devs35.herokuapp.com/devs/${id}`)
     .then(response => response.json())
     .then(d => {
-      setData(d)
-    console.log(d)})
+      setData(d)})
+    fetch(`https://devs35.herokuapp.com/devs/${id}/languages`)
+    .then(response => response.json())
+    .then(data => {
+      setLan(data.languages)
+      console.log(data.languages)} )
   }
 
   return (
@@ -34,7 +39,7 @@ function App() {
        <CommPage/>
       </Route>
       <Route path="/devs/:id">
-<Devcard data={data}/>
+<Devcard data={data} languages={lan}/>
       </Route>
     </Switch>
     <Footer/>
