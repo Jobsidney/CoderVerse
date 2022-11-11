@@ -12,6 +12,16 @@ function App() {
   const[data, setData] = useState({})
   const [lan, setLan] = useState([])
 
+function handleDelete(id){
+  fetch(`https://devs35.herokuapp.com/devs/${id}`,{
+    method: 'DELETE',
+    headers: {
+        'Content-type': 'application/json'
+    }
+  })
+ 
+}
+
   function handleClick(id){
     fetch(`https://devs35.herokuapp.com/devs/${id}`)
     .then(response => response.json())
@@ -39,7 +49,7 @@ function App() {
        <CommPage/>
       </Route>
       <Route path="/devs/:id">
-<Devcard data={data} languages={lan}/>
+<Devcard data={data} languages={lan} handleDelete={handleDelete}/>
       </Route>
     </Switch>
     <Footer/>

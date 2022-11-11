@@ -2,6 +2,9 @@ import React from 'react';
 import {ImLocation2} from "react-icons/im"
 
 function Devcard({data, languages}) {
+
+
+
   return (
 	<div className=' mt-4 flex flex-col space-y-9 xl:mx-[200px] lg:mx-[80px] 2xl:mx-[400px] md:mx-[100px] sm:mx-[10px] max-[490px]:mx-[10px]'>
 		
@@ -22,7 +25,7 @@ function Devcard({data, languages}) {
 				</div>
 			</div>
 			<div>
-			<button className='bg-amber-400 px-4 py-3' >Contact me</button>
+			<button className='bg-amber-400 px-4 py-3'  >Delete Account</button>
 			</div>
 		</div>
         <div className='flex space-x-6 max-[490px]:flex-col max-[490px]:space-y-4 max-[490px]:space-x-0'>

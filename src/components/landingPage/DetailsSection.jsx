@@ -21,13 +21,13 @@ function DetailsSection({dev,  handleDevChange, lan, handleLanguageChange, list,
                 })}
             </select>
 
-            <select className='px-4 py-2 outline-none border-none'
+            {/* <select className='px-4 py-2 outline-none border-none'
             value={lan}
             onChange={handleLanguageChange}>
                 {skills.map((skill,index) => {
                     return <option value={skill} key={index}>{skill}</option>
                 })}
-            </select>
+            </select> */}
         </div>
 <DeveloperList data={list} onClick={onClick}/>
 
