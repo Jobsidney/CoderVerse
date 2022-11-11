@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 function Community() {
   return (
-    <div className='grid place-items-center min-h-screen mt-8'>
+    <div className='grid place-items-center min-h-screen mt-[100px]'>
     <div className='  grid gap-4 xs:grid-cols-2  xs:p-8 md:grid-cols-4 '>
         <h1 className='font-bold text-2xl text-center xs:col-span-2 xs:grid xs:grid-cols-2  x:gap-4 md:col-span-3 md:text-5xl' >
             <span className='bg-amber-400'>Join a community today</span>
@@ -34,7 +36,9 @@ function Community() {
                 </div>
                 <div className='self-center md:text-lg md:col-span-2 md:text-center md:px-4'>
                 <p >Do you want to be a pro in your field? Or want to grow your skills?</p>
-                <button className='border-solid border-2 border-amber-400 rounded-md px-8 py-2 mt-7 hover:bg-amber-400 hover:text-white duration-500'>Join</button>
+                <Link to='/community' >
+                <button className='button'>Join</button>
+                </Link>
                 </div>
     </div>
     </div>
