@@ -4,14 +4,14 @@ import LandingPage from './components/landingPage/LandingPage';
 import NavBar from './components/landingPage/NavBar';
 import Footer from './components/landingPage/Footer';
 import CreateProfile from './components/newDev/CreateProfile';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route, useHistory} from 'react-router-dom'
 import CommPage from './components/landingPage/CommPage';
 import Devcard from './components/DevCard/DevCard';
 
 function App() {
   const[data, setData] = useState({})
   const [lan, setLan] = useState([])
-
+  const history = useHistory()
 function handleDelete(id){
   fetch(`https://devs35.herokuapp.com/devs/${id}`,{
     method: 'DELETE',
@@ -19,6 +19,7 @@ function handleDelete(id){
         'Content-type': 'application/json'
     }
   })
+
  
 }
 
