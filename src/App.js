@@ -11,17 +11,19 @@ import Devcard from './components/DevCard/DevCard';
 function App() {
   const[data, setData] = useState({})
   const [lan, setLan] = useState([])
+  let history = useHistory();
  
-function handleDelete(id){
-  fetch(`https://devs35.herokuapp.com/devs/${id}`,{
-    method: 'DELETE',
-    headers: {
-        'Content-type': 'application/json'
+  function handleDelete(id){
+      fetch(`https://devs35.herokuapp.com/devs/${id}`,{
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then((r) => r.json())
+        .then(() => console.log("deleted!"));
+        history.push('/');
     }
-  })
-
- 
-}
 
   function handleClick(id){
     fetch(`https://devs35.herokuapp.com/devs/${id}`)
