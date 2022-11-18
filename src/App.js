@@ -11,7 +11,7 @@ import Devcard from './components/DevCard/DevCard';
 function App() {
   const[data, setData] = useState({})
   const [lan, setLan] = useState([])
-  let history = useHistory();
+ 
  
   function handleDelete(id){
       fetch(`https://devs35.herokuapp.com/devs/${id}`,{
@@ -22,7 +22,7 @@ function App() {
       })
       .then((r) => r.json())
         .then(() => console.log("deleted!"));
-        history.push('/');
+      
     }
 
   function handleClick(id){
